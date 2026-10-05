@@ -1,6 +1,4 @@
-# 1. Overwrite deploy.yml with the corrected workflow content
-
-name: Build & Push Portfolio Docker Image to AWS ECR
+name: Build, Push & Auto-Deploy to AWS EC2
 
 on:
   push:
@@ -8,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-push:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,7 +30,26 @@ jobs:
           ECR_REPOSITORY: portfolio_website
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          docker build -t \(ECR_REGISTRY/\)ECR_REPOSITORY:\(IMAGE_TAG -t\)ECR_REGISTRY/$ECR_REPOSITORY:latest .
+          docker push \(ECR_REGISTRY/\)ECR_REPOSITORY:$IMAGE_TAG
+          docker push \(ECR_REGISTRY/\)ECR_REPOSITORY:latest
 
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC_2 }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSHKEY }}
+          script: |
+            # Authenticate with ECR on the EC2 server
+            aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 262786914271.dkr.ecr.ap-southeast-2.amazonaws.com
+
+            # Pull the fresh image
+            docker pull 262786914271.dkr.ecr.ap-southeast-2.amazonaws.com/portfolio_website:latest
+
+            # Stop and remove existing container if running
+            docker stop portfolio-app || true
+            docker rm portfolio-app || true
+
+            # Run the updated container on Port 80
+            docker run -d -p 80:80 --name portfolio-app 262786914271.dkr.ecr.ap-southeast-2.amazonaws.com/portfolio_website:latest
