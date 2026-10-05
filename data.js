@@ -30,7 +30,7 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
       { label: "Location", value: "Pune, India" },
       { label: "University", value: "Savitribai Phule Pune University" },
       { label: "Branch", value: "Computer Engineering" },
-      { label: "Year", value: "Second Year (SE)" },
+      { label: "Year", value: "Third Year (TE)" },
     ],
   },
 
