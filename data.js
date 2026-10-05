@@ -69,7 +69,7 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
       codeLink: "#",
     },
     {
-      title: "Task Manager App",
+      title: "Travel Management system",
       description:
         "A full-stack to-do application with user authentication, CRUD operations, and a clean Material-inspired UI.",
       tags: ["React", "Node.js", "MongoDB"],
