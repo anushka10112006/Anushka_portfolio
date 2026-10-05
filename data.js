@@ -61,7 +61,7 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
   //   - codeLink    : URL to GitHub repo (use "#" if none)
   projects: [
     {
-      title: "Weather Dashboard",
+      title: "AI based traffic management system",
       description:
         "A real-time weather app that fetches data from OpenWeather API and displays forecasts with beautiful charts.",
       tags: ["HTML", "CSS", "JavaScript", "API"],
