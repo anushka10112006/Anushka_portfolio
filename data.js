@@ -85,7 +85,7 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
       codeLink: "#",
     },
     {
-      title: "Chat Application",
+      title: "Automated CI/CD Pipeline",
       description:
         "A real-time messaging app using WebSockets with typing indicators, read receipts, and emoji support.",
       tags: ["Python", "Flask", "WebSockets"],
