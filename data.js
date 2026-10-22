@@ -37,8 +37,6 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
   // ----------------------------------------------------------
   // 🛠️ SKILLS
   // ----------------------------------------------------------
-  // Each skill has a name and a level (1-5).
-  // The level controls the visual indicator bar.
   skills: [
     { name: "HTML & CSS", level: 4 },
     { name: "JavaScript", level: 3 },
@@ -53,12 +51,6 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
   // ----------------------------------------------------------
   // 🚀 PROJECTS
   // ----------------------------------------------------------
-  // Add your own projects here. Each project needs:
-  //   - title       : Project name
-  //   - description : Short summary (1-2 lines)
-  //   - tags        : Tech stack used (array of strings)
-  //   - liveLink    : URL to live demo (use "#" if none)
-  //   - codeLink    : URL to GitHub repo (use "#" if none)
   projects: [
     {
       title: "AI based traffic management system",
@@ -121,9 +113,6 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
   // ----------------------------------------------------------
   // 🌐 SOCIAL LINKS & CONTACT
   // ----------------------------------------------------------
-  // Supported platforms: github, linkedin, twitter, instagram,
-  //                      email, codepen, devto, medium, youtube
-  // Use the "icon" field to choose the SVG icon displayed.
   contact: {
     email: "chinmayingle26@gmail.com",
     socialLinks: [
@@ -153,10 +142,8 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
   // ----------------------------------------------------------
   // 🎨 THEME SETTINGS (Optional)
   // ----------------------------------------------------------
-  // Accent color is used for buttons, highlights, and links.
-  // You can use any valid CSS color value.
   theme: {
-    accentColor: "#c8ff00",       // Lime green accent (inspired by Lando Norris!)
+    accentColor: "#c8ff00",       // Lime green accent
     accentColorDark: "#a8d900",   // Darker shade for hover states
   },
 };
