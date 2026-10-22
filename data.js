@@ -22,7 +22,7 @@ const portfolioData = {
   // 📖 ABOUT ME
   // ----------------------------------------------------------
   about: {
-    description: `I'm a Second Year Engineering student passionate about building 
+    description: `I'm a Third Year Engineering student passionate about building 
 things that live on the internet. I love exploring new technologies, 
 writing clean code, and turning ideas into real-world projects. 
 When I'm not coding, you'll find me playing chess or reading tech blogs.`,
@@ -124,7 +124,8 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
   // Supported platforms: github, linkedin, twitter, instagram,
   //                      email, codepen, devto, medium, youtube
   // Use the "icon" field to choose the SVG icon displayed.
-  contact: {
+  c
+  ontact: {
     email: "chinmayingle26@gmail.com",
     socialLinks: [
       {
