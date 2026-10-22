@@ -124,8 +124,7 @@ When I'm not coding, you'll find me playing chess or reading tech blogs.`,
   // Supported platforms: github, linkedin, twitter, instagram,
   //                      email, codepen, devto, medium, youtube
   // Use the "icon" field to choose the SVG icon displayed.
-  c
-  ontact: {
+  contact: {
     email: "chinmayingle26@gmail.com",
     socialLinks: [
       {
